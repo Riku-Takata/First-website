@@ -1,0 +1,74 @@
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>私のWebサイト</title>
+  <style>
+    /* タブのラベルのスタイル */
+    .tab-label {
+      display: inline-block;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #eee;
+      cursor: pointer;
+    }
+
+    /* タブのパネルのスタイル */
+    .tab-panel {
+      display: none;
+      padding: 20px;
+      border-top: none;
+      border: 1px solid #ccc;
+    }
+
+    /* チェックされたラジオボタンに対応するラベルとパネルを表示する */
+    #tab1:checked ~ #label1,
+    #tab2:checked ~ #label2,
+    #tab3:checked ~ #label3,
+    #tab4:checked ~ #label4 {
+      background-color: white;
+    }
+
+    #tab1:checked ~ #panel1,
+    #tab2:checked ~ #panel2,
+    #tab3:checked ~ #panel3,
+    #tab4:checked ~ #panel4 {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>私のWebサイト</h1>
+  <p>このWebサイトでは、私（莉玖）の家族のことを紹介します。</p>
+
+  <!-- タブのラジオボタン -->
+  <input type="radio" name="tab" id="tab1" checked>
+  <input type="radio" name="tab" id="tab2">
+  <input type="radio" name="tab" id="tab3">
+  <input type="radio" name="tab" id="tab4">
+
+  <!-- タブのラベル -->
+  <label for="tab1" id="label1" class="tab-label">高田英和</label>
+  <label for="tab2" id="label2" class="tab-label">高田恵</label>
+  <label for="tab3" id="label3" class="tab-label">高田莉玖</label>
+  <label for="tab4" id="label4" class="tab-label">高田連央</label>
+
+  <!-- タブのパネル -->
+  <div id="panel1" class="tab-panel">
+    <h2>父</h2>
+    <p>父は国家公務員で、趣味は畑作業、マインクラフトです。</p>
+  </div>
+  <div id="panel2" class="tab-panel">
+    <h2>母</h2>
+    <p>母は保険士で、趣味は睡眠です。</p>
+  </div>
+  <div id="panel3" class="tab-panel">
+    <h2>私</h2>
+    <p>私は大学生で、趣味はプログラミングです。</p>
+  </div>
+  <div id="panel4" class="tab-panel">
+    <h2>弟</h2>
+    <p>弟は高校生で、趣味はバスケです。</p>
+  </div>
+
+</body>
+</html>
